@@ -1,0 +1,43 @@
+
+[[Snippets]]
+  Description = "English -> Українська"
+  Output = ""
+  Tag = ["tr", "en"]
+  command = "trans en:uk '<text>'"
+  
+[[Snippets]]
+  Description = "Українська -> English"
+  Output = ""
+  Tag = ["tr", "en"]
+  command = "trans uk:en '<text>'"
+  
+[[Snippets]]
+  Description = "Japanese -> Українська"
+  Output = ""
+  Tag = ["tr", "ja"]
+  command = "trans ja:uk '<text>'"
+
+[[Snippets]]
+  Description = "Українська -> Japanese"
+  Output = ""
+  Tag = ["tr", "ja"]
+  command = "trans uk:ja '<text>'"
+  
+[[Snippets]]
+  Description = "Spain -> Українська"
+  Output = ""
+  Tag = ["tr", "es"]
+  command = "trans es:uk '<text>'"
+
+[[Snippets]]
+  Description = "Українська -> Spain"
+  Output = ""
+  Tag = ["tr", "es"]
+  command = "trans uk:es '<text>'"
+  
+[[Snippets]]
+  Description = "Context for English word."
+  Output = ""
+  Tag = ["reverso"]
+  command = "google-chrome https://context.reverso.net/translation/english-ukrainian/<word or sentence>"
+

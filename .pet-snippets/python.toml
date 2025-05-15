@@ -1,0 +1,66 @@
+
+[[Snippets]]
+  Description = "Init a requirements files."
+  Output = ""
+  Tag = ["python", "req", "pip"]
+  command = "echo '<requirements>' | awk '{for(i=1;i<=NF;i++) print $i}' > requirements.txt && touch requirements_updatable.txt && touch requirements_freezed.txt"
+
+[[Snippets]]
+  Description = "Install the freezed requirements."
+  Output = ""
+  Tag = ["python", "req", "pip"]
+  command = "pip install -r requirements_freezed.txt"
+  
+[[Snippets]]
+  Description = "Install the new requirements."
+  Output = ""
+  Tag = ["python", "req", "pip"]
+  command = "pip install -r requirements.txt"
+  
+[[Snippets]]
+  Description = "Install the latest available requirements."
+  Output = ""
+  Tag = ["python", "req", "pip"]
+  command = "pip install -r requirements_updatable.txt --upgrade"
+  
+[[Snippets]]
+  Description = "Get a list of all the outdated packages."
+  Output = ""
+  Tag = ["python", "req", "pip"]
+  command = "pip list --outdated"
+  
+[[Snippets]]
+  Description = "Generate the requirements_updatable.txt."
+  Output = ""
+  Tag = ["python", "req", "pip"]
+  command = "pip freeze | sed 's/==/>=/' > requirements_updatable.txt"
+  
+[[Snippets]]
+  Description = "Generate the requirements_freezed.txt."
+  Output = ""
+  Tag = ["python", "req", "pip"]
+  command = "pip freeze > requirements_freezed.txt"
+  
+[[Snippets]]
+  Description = "Upgrade PIP."
+  Output = ""
+  Tag = ["python", "req", "pip"]
+  command = "python -m pip install --upgrade pip"
+  
+[[Snippets]]
+  Description = "Create a base dir infrastructure."
+  Output = ""
+  Tag = ["python"]
+  command = "mkdir -p src && echo \"def main():\n    print('Hello, world!')\n\nif __name__ == '__main__':\n    main()\" > main.py"
+
+[[Snippets]]
+  Description = "Run venv."
+  Output = ""
+  Tag = ["python"]
+  command = "source ./<env-name=venv>/bin/activate"
+  
+[[Snippets]]
+  Description = "Create documentation."
+  Output = ""
+  Tag = ["python", "doc"]
+  command = "python -m venv <path=.>/venv && cd <path=.>  && . venv/bin/activate && pip install mkdocs-material mkdocs-minify-plugin mkdocs-glightbox mkdocs-static-i18n && mkdocs new <path=.> && echo mkdocs-material mkdocs-minify-plugin mkdocs-glightbox mkdocs-static-i18n | awk '{for(i=1;i<=NF;i++) print $i}' > requirements.txt && touch requirements_updatable.txt && pip freeze > requirements_freezed.txt && pip freeze | sed 's/==/>=/' > requirements_updatable.txt"

@@ -1,0 +1,19 @@
+alias sources="nano /etc/apt/sources.list"
+
+alias libs='ldconfig -v 2>/dev/null | grep "^/" -A 999 | awk '\''/^\/.*:$/{if(x)print x;x=$0;next}{x=x"\n"$0}END{print x}'\'''
+
+alias fapps='flatpak list --app --columns=name'
+
+alias fappsid='flatpak list --app --columns=application'
+
+alias mojo-new='magic init . --format mojoproject'
+
+alias scmd='pet search -t'
+
+alias cmd='pet exec -t'
+
+alias ccmd='pet clip -t'
+
+alias list-cmd='pet list'
+
+alias f=".fvm/flutter_sdk/bin/flutter"

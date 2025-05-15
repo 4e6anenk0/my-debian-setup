@@ -1,0 +1,144 @@
+
+[[Snippets]]
+  Description = "Create a Dart Web project."
+  Output = ""
+  Tag = ["dart", "dart-new"]
+  command = "dart create -t web <name>"
+
+[[Snippets]]
+  Description = "Create a Dart CLI app with args parser."
+  Output = ""
+  Tag = ["dart", "dart-new"]
+  command = "dart create -t cli <name>"
+
+[[Snippets]]
+  Description = "Create a Dart Console app."
+  Output = ""
+  Tag = ["dart", "dart-new"]
+  command = "dart create -t console <name>"
+
+[[Snippets]]
+  Description = "Create a Dart Package."
+  Output = ""
+  Tag = ["dart", "dart-new"]
+  command = "dart create -t package <name>"
+
+[[Snippets]]
+  Description = "Create a Dart Shelf server."
+  Output = ""
+  Tag = ["dart", "dart-new"]
+  command = "dart create -t server-shelf <name>"
+
+[[Snippets]]
+  Description = "Create a Flutter App."
+  Output = ""
+  Tag = ["flutter", "flutter-new"]
+  command = "flutter create -t app <name>"
+
+[[Snippets]]
+  Description = "Create a Flutter Package."
+  Output = ""
+  Tag = ["flutter", "flutter-new"]
+  command = "flutter create -t package <name>"
+
+[[Snippets]]
+  Description = "Create a Flutter Plugin."
+  Output = ""
+  Tag = ["flutter", "flutter-new"]
+  command = "flutter create -t plugin <name>"
+  
+[[Snippets]]
+  Description = "Download Flutter dependencies."
+  Output = ""
+  Tag = ["flutter", "pub"]
+  command = "flutter pub get"
+  
+[[Snippets]]
+  Description = "Download Dart dependencies."
+  Output = ""
+  Tag = ["flutter", "pub"]
+  command = "dart pub get"
+
+[[Snippets]]
+  Description = "Update to the latest compatible versions of packages."
+  Output = ""
+  Tag = ["flutter", "pub"]
+  command = "flutter pub upgrade"
+  
+[[Snippets]]
+  Description = "Update to the latest possible version of packages."
+  Output = ""
+  Tag = ["flutter", "pub"]
+  command = "flutter pub upgrade --major-versions"
+  
+[[Snippets]]
+  Description = "Set the JAVA JDK dir for Flutter."
+  Output = ""
+  Tag = ["flutter"]
+  command = "flutter config --jdk-dir=<path>"
+  
+[[Snippets]]
+  Description = "Add localization support library."
+  Output = ""
+  Tag = ["flutter", "intl", "local"]
+  command = "flutter pub add flutter_localizations --sdk=flutter && flutter pub add intl:any && sed -i \"/^flutter:/a\\  generate: true\" pubspec.yaml"
+  
+[[Snippets]]
+  Description = "Generate localizations."
+  Output = ""
+  Tag = ["flutter", "intl", "local"]
+  command = "flutter gen-l10n"
+  
+[[Snippets]]
+  Description = "Add localization infrastructure."
+  Output = ""
+  Tag = ["flutter", "intl", "local"]
+  command = "echo 'arb-dir: lib/<dirname=localization>\ntemplate-arb-file: app_en.arb\noutput-localization-file: app_localizations.dart' > l10n.yaml && mkdir -p ./lib/<dirname=localization> && echo '{\n  \"helloWorld\": \"Hello World!\",\n  \"@helloWorld\": {\n    \"description\": \"The conventional newborn programmer greeting\"\n  }\n}' > ./lib/<dirname=localization>/app_en.arb"
+  
+[[Snippets]]
+  Description = "Global: Activate FVM."
+  Output = ""
+  Tag = ["flutter", "fvm"]
+  command = "dart pub global activate fvm"
+  
+[[Snippets]]
+  Description = "FVM Flutter pub get"
+  Output = ""
+  Tag = ["flutter", "fvm"]
+  command = "fvm flutter pub get"
+
+[[Snippets]]
+  Description = "FVM Dart pub get"
+  Output = ""
+  Tag = ["flutter", "fvm"]
+  command = "fvm dart pub get"
+  
+[[Snippets]]
+  Description = "Add FVM to this project."
+  Output = ""
+  Tag = ["flutter", "fvm"]
+  command = "echo '{\n  \"flutter\": \"<default-version=stable>\",\n \"flavors\": {\n  \"dev\": \"<dev-version=stable>\",\n  \"prod\": \"<prod-version=3.22.2>\",\n  \"pre\": \"<pre-version=beta>\"\n  },\n  \"updateVscodeSettings\": true,\n  \"updateGitIgnore\": true,\n  \"runPubGetOnSdkChanges\": true\n}' > .fvmrc"
+  
+[[Snippets]]
+  Description = "How to: Internationalizing Flutter apps"
+  Output = ""
+  Tag = ["flutter-doc"]
+  command = "google-chrome https://docs.flutter.dev/ui/accessibility-and-internationalization/internationalization"
+  
+[[Snippets]]
+  Description = "FVM DEV"
+  Output = ""
+  Tag = ["flutter", "fvm"]
+  command = "fvm use dev"
+  
+[[Snippets]]
+  Description = "FVM PROD"
+  Output = ""
+  Tag = ["flutter", "fvm"]
+  command = "fvm use prod"
+  
+[[Snippets]]
+  Description = "FVM PRE"
+  Output = ""
+  Tag = ["flutter", "fvm"]
+  command = "fvm use pre"

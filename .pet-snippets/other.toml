@@ -1,0 +1,157 @@
+
+[[Snippets]]
+  Description = "List installed Flatpaks."
+  Output = ""
+  Tag = ["flatpak"]
+  command = "flatpak list --app --columns=name"
+
+[[Snippets]]
+  Description = "List installed Flatpaks by ID."
+  Output = ""
+  Tag = ["flatpak"]
+  command = "flatpak list --app --columns=application"
+
+[[Snippets]]
+  Description = "List installed libs."
+  Output = ""
+  Tag = ["os", "list-utils"]
+  command = "ldconfig -v 2>/dev/null | grep \"^/\" -A 999 | awk '/^\\/.*:$/{if(x)print x;x=$0;next}{x=x\"\\n\"$0}END{print x}'"
+  
+  [[Snippets]]
+  Description = "List installed deb packages."
+  Output = ""
+  Tag = ["os", "list-utils"]
+  command = "apt list --installed"
+
+[[Snippets]]
+  Description = "Find a file or dir in your system."
+  Output = ""
+  Tag = ["os", "utils", "custom-utils", "finder"]
+  command = "finder <name>"
+
+[[Snippets]]
+  Description = "Open: Debian Sources List."
+  Output = ""
+  Tag = ["os"]
+  command = "sudo <editor=nano> /etc/apt/sources.list"
+
+[[Snippets]]
+  Description = "Full Debian update."
+  Output = ""
+  Tag = ["os"]
+  command = "sudo apt update && sudo apt upgrade"
+  
+[[Snippets]]
+  Description = "Upgrading the Debian Version!!!"
+  Output = ""
+  Tag = ["os"]
+  command = "sudo apt update && sudo apt full-upgrade"
+  
+[[Snippets]]
+  Description = "Create backup file."
+  Output = ""
+  Tag = ["os", "backup"]
+  command = "sudo cp -b <filename> <filename>.backup"
+  
+[[Snippets]]
+  Description = "List disks."
+  Output = ""
+  Tag = ["os", "list-utils"]
+  command = "sudo fdisk -l"
+
+[[Snippets]]
+  Description = "Daemon status."
+  Output = ""
+  Tag = ["os", "daemon"]
+  command = "sudo systemctl status <daemon-name>.service"
+  
+[[Snippets]]
+  Description = "Daemon start."
+  Output = ""
+  Tag = ["os", "daemon"]
+  command = "sudo systemctl start <daemon-name>.service"
+  
+[[Snippets]]
+  Description = "Daemon status."
+  Output = ""
+  Tag = ["os", "daemon"]
+  command = "systemctl status <daemon-name>.service"
+
+[[Snippets]]
+  Description = "Daemon enable."
+  Output = ""
+  Tag = ["os", "daemon"]
+  command = "sudo systemctl enable <daemon-name>.service"
+
+[[Snippets]]
+  Description = "Daemon disable."
+  Output = ""
+  Tag = ["os", "daemon"]
+  command = "sudo systemctl disable <daemon-name>.service"
+
+[[Snippets]]
+  Description = "Open: GRUB config."
+  Output = ""
+  Tag = ["os"]
+  command = "sudo <editor=nano> /etc/default/grub"
+  
+[[Snippets]]
+  Description = "Alternatives: Show all available."
+  Output = ""
+  Tag = ["os", "alt", "alternatives"]
+  command = "update-alternatives --get-selections"
+  
+[[Snippets]]
+  Description = "Alternatives: Display information about a group."
+  Output = ""
+  Tag = ["os", "alt", "alternatives"]
+  command = "update-alternatives --list <group>"
+  
+[[Snippets]]
+  Description = "Alternatives: Show and optionally change a specific group."
+  Output = ""
+  Tag = ["os", "alt", "alternatives"]
+  command = "sudo update-alternatives --config <group>"
+
+[[Snippets]]
+  Description = "Link: Create a Symlink"
+  Output = ""
+  Tag = ["os", "link"]
+  command = "sudo ln -s <target> <symlink>"
+
+[[Snippets]]
+  Description = "Link: Create a Link"
+  Output = ""
+  Tag = ["os", "link"]
+  command = "sudo ln <target> <symlink>"
+  
+[[Snippets]]
+  Description = "Find last changed files"
+  Output = ""
+  Tag = ["os"]
+  command = "find <dirs=/etc /bin /usr/bin /lib /tmp> -type f -mtime -<days> 2>/dev/null | head -n <count=50> | xargs -d '\n' stat --format='%y %n'"
+  
+[[Snippets]]
+  Description = "Find last changed files 2"
+  Output = ""
+  Tag = ["os"]
+  command = "find <dirs=/etc /bin /usr/bin /lib /tmp> <type=-type f> -mtime -<days> -print0 2>/dev/null | xargs -0 stat --format='%y %n' | sort | head -n <count=50>"
+  
+[[Snippets]]
+  Description = "Show all network process"
+  Output = ""
+  Tag = ["os", "network"]
+  command = "sudo lsof -i -P -n"
+  
+[[Snippets]]
+  Description = "Safe remove"
+  Output = ""
+  Tag = ["os", "remove"]
+  command = "echo 'За шляхом <path> буде видалено наступне' && ls -lah <path> && sudo rm -rIv <path>"
+  
+[[Snippets]]
+  Description = "Move to trash"
+  Output = ""
+  Tag = ["os", "remove"]
+  command = "gio trash <file or dir>"
+  

@@ -1,0 +1,36 @@
+
+[[Snippets]]
+  Description = "Add upstream repo."
+  Output = ""
+  Tag = ["git"]
+  command = "git remote add upstream <upstream-repo>"
+
+[[Snippets]]
+  Description = "Create a new branch and switch to it."
+  Output = ""
+  Tag = ["git"]
+  command = "git checkout -b <new-branch>"
+
+[[Snippets]]
+  Description = "Delete a local and remote Git branch."
+  Output = ""
+  Tag = ["git"]
+  command = "git branch -d <old-branch> && git push origin --delete <old-branch>"
+
+[[Snippets]]
+  Description = "List all local and remote branches."
+  Output = ""
+  Tag = ["git"]
+  command = "git branch -a"
+
+[[Snippets]]
+  Description = "Push local commits to the remote repository."
+  Output = ""
+  Tag = ["git"]
+  command = "git push origin <branch>"
+  
+[[Snippets]]
+  Description = "Create new project from git template."
+  Output = ""
+  Tag = ["git", "template"]
+  command = "git archive --format=tar --remote=<URL> HEAD | tar -x"
