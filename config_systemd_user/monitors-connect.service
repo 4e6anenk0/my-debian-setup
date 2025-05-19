@@ -1,0 +1,15 @@
+[Unit]
+Description=Monitors Connect Service
+After=graphical-session.target
+BindsTo=graphical-session.target
+PartOf=graphical-session.target
+Requisite=graphical-session.target
+ConditionEnvironment=DISPLAY
+ConditionEnvironment=XAUTHORITY
+
+[Service]
+Type=oneshot
+ExecStart=/home/yppppl/.local/share/scripts/monitors-connect.sh
+
+[Install]
+WantedBy=graphical-session.target
