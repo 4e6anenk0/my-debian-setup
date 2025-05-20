@@ -14,3 +14,4 @@ export FLUTTER_HOME
 
 source "$HOME/.aliases"
 . "$HOME/.cargo/env"
+
